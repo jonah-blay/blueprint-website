@@ -609,6 +609,11 @@ button, input, select, textarea {
     min-height: 180px;
     height: 180px;
   }
+  
+  /* Fix iOS massive zoom bug by dropping fixed attachment on mobile */
+  .hero-window-bg {
+    background-attachment: scroll;
+  }
 }
 
 /* Fixed Background Image Viewport (Logo Image Standstill Illusion) */
