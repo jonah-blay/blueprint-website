@@ -1,0 +1,13 @@
+# Internal AI Context
+GEMINI.md
+**/GEMINI.md
+.gemini/
+
+# Archives
+archive/
+*.zip
+*.tar.gz
+
+# macOS system files
+.DS_Store
+**/.DS_Store

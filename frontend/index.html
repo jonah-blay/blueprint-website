@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="B&M Blueprint L.L.C. - Elite SAT & Academic Tutoring based in Tallahassee, Florida. Master the 1330 SAT score for 100% Bright Futures coverage.">
+  <title>B&M Blueprint L.L.C. | SAT & Academic Tutoring</title>
+  
+  <!-- Prevent Theme Flash -->
+  <script>
+    (function() {
+      var cached = localStorage.getItem('bm_theme');
+      var isDark = cached === 'dark' || (!cached && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (isDark) document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico?v=5" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=5">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=5">
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css?v=57">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="logo-link" data-page-target="home">
+        <div class="logo-image-wrapper">
+          <img src="assets/banner.png?v=3" alt="B&M Blueprint Logo" class="logo-banner-img">
+        </div>
+        <div class="header-logo-text">B&amp;M Blueprint L.L.C.</div>
+      </a>
+
+      <div class="nav-actions">
+        <!-- Header Dark Mode / Light Mode Toggle Button -->
+        <button class="theme-toggle-btn-header" id="header-theme-toggle-btn" aria-label="Toggle Light and Dark Mode">
+          <span id="header-theme-icon" class="theme-icon-container"></span>
+          <span id="header-theme-text">Dark Mode</span>
+        </button>
+
+        <!-- Right Slide-Out Menu Button -->
+        <button class="menu-trigger-btn" id="menu-trigger-btn" aria-label="Open Navigation Menu">
+          <span>Menu</span>
+          <span style="font-size:1.1rem">☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Right Slide-Out Navigation Drawer & Backdrop -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="slide-drawer" id="slide-drawer" aria-label="Main Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <div style="font-weight:800; font-size:1.1rem; color:var(--color-blueprint)">B&amp;M Blueprint L.L.C.</div>
+        <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Navigation Menu">&times;</button>
+      </div>
+
+      <nav>
+        <ul class="drawer-nav-list">
+          <li><a href="#" class="drawer-nav-link active" data-page-target="home">Home</a></li>
+          <li><a href="#" class="drawer-nav-link" data-page-target="program">Our Program</a></li>
+          <li><a href="#" class="drawer-nav-link" data-page-target="tutors">Your Tutors</a></li>
+          <li><a href="#" class="drawer-nav-link" data-page-target="pricing">Plans & Pricing</a></li>
+          <li><a href="#" class="drawer-nav-link" data-page-target="bright-futures">Bright Futures Info</a></li>
+          <li><a href="#" class="drawer-nav-link" data-page-target="testimonials">Testimonials</a></li>
+          <li><a href="#" class="drawer-nav-link" data-page-target="contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="drawer-footer">
+      <!-- Theme Toggle inside Menu -->
+      <button class="theme-toggle-btn-drawer" id="theme-toggle-btn" aria-label="Toggle Light and Dark Mode">
+        <span id="theme-icon" class="theme-icon-container"></span>
+        <span id="theme-text">Dark Mode</span>
+      </button>
+
+      <div style="font-weight:700; color:var(--text-primary); margin-top:1.25rem; margin-bottom:0.25rem">Tallahassee, Florida</div>
+      <div>bandmblueprint@gmail.com</div>
+      <div>850-556-9742 | 850-966-0051</div>
+    </div>
+  </aside>
+
+  <!-- HERO SECTION WITH FULL-WIDTH WINDOW SCROLL ILLUSION -->
+  <section class="hero-wrapper" id="hero-wrapper">
+    <div class="container" id="hero-tagline-container">
+      <!-- Tagline 1 Header above Window with Borders -->
+      <div class="hero-tagline-bordered-box interactive-hero-box" id="hero-tagline-box">
+        <h1 class="hero-tagline-top" id="hero-tagline-text">
+          Give yourself a real shot at <span>Bright Futures</span>
+        </h1>
+      </div>
+    </div>
+
+    <!-- Full-Width Hero Window Frame stretching from left to right side of screen -->
+    <div class="hero-window-frame-full" id="hero-window-frame">
+      <div class="hero-window-bg" id="hero-window-bg"></div>
+      <div class="hero-window-overlay"></div>
+
+      <!-- Centered Banner inside Hero Window -->
+      <div class="hero-centered-banner reveal-init reveal-scale" id="hero-centered-banner">
+        <div class="banner-tagline" id="hero-banner-tagline">Tired of generic prep?</div>
+        <div class="hero-banner-actions" id="hero-banner-actions">
+          <button class="btn btn-blueprint" id="hero-learn-more-btn" data-page-target="program">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MULTI-PAGE CONTAINER VIEWS -->
+  <main id="main-app-content">
+
+    <!-- ================= PAGE 1: HOME ================= -->
+    <div class="page-view" id="page-home">
+      
+      <section class="section-block">
+        <div class="container">
+
+          <!-- Company Mission Banner -->
+          <div class="mission-card reveal-init reveal-slide-left interactive-card">
+            <div class="mission-text-column">
+              <div style="font-weight:700; color:var(--color-blueprint); font-size:0.9rem; margin-bottom:0.5rem">OUR MISSION</div>
+              <h2 style="font-size:1.8rem; font-weight:800; margin-bottom:1rem">Student-First SAT Excellence &amp; Scholarship Guidance</h2>
+              <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.7">
+                At B&amp;M Blueprint, our mission is to deliver high-impact, results-driven SAT preparation. By pairing interactive group lectures with personalized 1-on-1 mentoring, our intensive 18-hour program equips students with the exact strategies needed to surpass target thresholds, unlock 100% Bright Futures scholarship coverage, and gain admission to top-tier universities nationwide.
+              </p>
+            </div>
+
+            <div style="text-align:center">
+              <div class="score-badge-large"><span style="color:var(--text-muted); font-weight:800; text-transform:uppercase; margin-right:0.5rem; letter-spacing:0.05em;">EST.</span>2025</div>
+              <div style="font-weight:700; font-size:1.1rem; margin-top:0.5rem">Student-First Mentoring</div>
+              <div style="color:var(--text-muted); font-size:0.9rem">In-State &amp; Out-of-State Goals</div>
+            </div>
+          </div>
+
+          <!-- Bright Futures 1330 Highlight -->
+          <div class="bright-futures-card reveal-init reveal-slide-right interactive-card">
+            <div class="bf-text-column">
+              <div style="font-weight:700; color:var(--color-blueprint); font-size:0.9rem; margin-bottom:0.5rem">FLORIDA SCHOLARSHIP TARGET</div>
+              <h2 style="font-size:2rem; font-weight:800; margin-bottom:1rem">Targeting the 1330 SAT Threshold</h2>
+              <p style="color:var(--text-secondary); margin-bottom:1.5rem">
+                In Florida, hitting a 1330 SAT score unlocks the Bright Futures Academic Scholars Award, covering 100% of in-state college tuition. Our entire curriculum is engineered around reaching and exceeding this target.
+              </p>
+              <button class="btn btn-gold" data-page-target="bright-futures">
+                Explore Bright Futures Scholarship
+              </button>
+            </div>
+
+            <div style="text-align:center">
+              <div class="score-badge-large">1330 <span>SAT</span></div>
+              <div style="font-weight:700; font-size:1.1rem; margin-top:0.5rem">100% In-State Tuition</div>
+              <div style="color:var(--text-muted); font-size:0.9rem">Florida Bright Futures Goal</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Cohorts Hosted & Overview -->
+      <section class="section-block" style="background-color:var(--bg-surface-alt)">
+        <div class="container">
+          <h2 class="section-title reveal-init reveal-fade-up">Track Record &amp; Cohorts</h2>
+          
+          <div class="reveal-stagger-parent cohort-grid">
+            <div class="reveal-card cohort-card">
+              <div style="font-weight:800; font-size:1.2rem; margin-bottom:0.25rem">August 2025 SAT</div>
+              <div style="color:var(--color-blueprint); font-weight:700; font-size:0.85rem">Status: Completed Cohort</div>
+            </div>
+            <div class="reveal-card cohort-card">
+              <div style="font-weight:800; font-size:1.2rem; margin-bottom:0.25rem">March 2026 SAT</div>
+              <div style="color:var(--color-blueprint); font-weight:700; font-size:0.85rem">Status: Completed Cohort</div>
+            </div>
+            <div class="reveal-card cohort-card active">
+              <div style="font-weight:800; font-size:1.2rem; margin-bottom:0.25rem">August 2026 SAT</div>
+              <div style="color:var(--color-gold-dark); font-weight:700; font-size:0.85rem">Status: Currently Active Program</div>
+            </div>
+            <div class="reveal-card cohort-card upcoming">
+              <div style="font-weight:800; font-size:1.2rem; margin-bottom:0.25rem">October 2026 SAT</div>
+              <div style="color:var(--text-muted); font-weight:700; font-size:0.85rem">Status: Upcoming Cohort</div>
+            </div>
+            <div class="reveal-card cohort-card upcoming">
+              <div style="font-weight:800; font-size:1.2rem; margin-bottom:0.25rem">December 2026 SAT</div>
+              <div style="color:var(--text-muted); font-weight:700; font-size:0.85rem">Status: Upcoming Cohort</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Co-Founders Preview -->
+      <section class="section-block">
+        <div class="container">
+          <h2 class="section-title reveal-init reveal-fade-up">Meet Your Lead Tutors</h2>
+          <div class="tutor-grid reveal-stagger-parent" id="tutors-container">
+            
+            <div class="tutor-card reveal-card interactive-card" id="tutor-preview-jonah-blay">
+              <div style="display:flex; flex-direction:column; align-items:center; text-align:center; height:100%; justify-content:space-between;">
+                <div style="display:flex; flex-direction:column; align-items:center; text-align:center; width:100%;">
+                  <div class="tutor-avatar-photo-wrapper">
+                    <img src="assets/photo_jonah.jpg?v=14" alt="Jonah Blay" class="tutor-avatar-photo-img" onerror="this.onerror=null; this.parentElement.outerHTML='<div class=\'tutor-avatar-placeholder\'>JB</div>';">
+                  </div>
+                  <h3 class="tutor-name" style="margin-bottom:0.25rem">Jonah Blay</h3>
+                  <div class="tutor-credentials" style="margin-bottom:0.75rem">Co-Founder and Lead Math Tutor</div>
+                  <div style="font-weight:700; font-size:0.95rem; color:var(--text-primary); margin-top:0.25rem">University of Notre Dame (Junior)</div>
+                  <div style="font-size:0.9rem; color:var(--color-blueprint); font-weight:600; margin-top:0.25rem">Physics, Honors Math, and Spanish</div>
+                  <div style="font-size:0.85rem; color:var(--color-gold-dark); font-weight:600; margin-top:0.25rem">Glynn Family Honors Program</div>
+                </div>
+                <div class="tutor-preview-logo-box">
+                  <img src="assets/nd.jpg?v=14" alt="University of Notre Dame Logo" class="tutor-preview-logo-img">
+                </div>
+              </div>
+            </div>
+
+            <div class="tutor-card reveal-card interactive-card" id="tutor-preview-kasey-mick">
+              <div style="display:flex; flex-direction:column; align-items:center; text-align:center; height:100%; justify-content:space-between;">
+                <div style="display:flex; flex-direction:column; align-items:center; text-align:center; width:100%;">
+                  <div class="tutor-avatar-photo-wrapper">
+                    <img src="assets/photo_kasey.jpg?v=14" alt="Kasey Mick" class="tutor-avatar-photo-img" onerror="this.onerror=null; this.parentElement.outerHTML='<div class=\'tutor-avatar-placeholder\'>KM</div>';">
+                  </div>
+                  <h3 class="tutor-name" style="margin-bottom:0.25rem">Kasey Mick</h3>
+                  <div class="tutor-credentials" style="margin-bottom:0.75rem">Co-Founder and Lead Reading Tutor</div>
+                  <div style="font-weight:700; font-size:0.95rem; color:var(--text-primary); margin-top:0.25rem">University of Florida (Junior)</div>
+                  <div style="font-size:0.9rem; color:var(--color-blueprint); font-weight:600; margin-top:0.25rem">Industrial and Systems Engineering</div>
+                  <div style="font-size:0.85rem; color:var(--color-gold-dark); font-weight:600; margin-top:0.25rem">Honors Program</div>
+                </div>
+                <div class="tutor-preview-logo-box">
+                  <img src="assets/uf.png?v=14" alt="University of Florida Logo" class="tutor-preview-logo-img">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ================= PAGE 2: PROGRAM DETAILS ================= -->
+    <div class="page-view hidden" id="page-program">
+      <section class="section-block">
+        <div class="container">
+          <h2 class="section-title reveal-init reveal-fade-up">The 4-Week, 18-Hour SAT Program</h2>
+
+          <div class="program-overview-card reveal-init reveal-scale">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem">
+              <div>
+                <h3 style="font-size:1.6rem; font-weight:800">Complete Program Overview</h3>
+                <div style="color:var(--text-secondary); font-size:0.95rem">14 Hours Group Lectures + 4 Private 1-on-1 Sessions</div>
+              </div>
+              <div style="text-align:right">
+                <div class="price-large">$799</div>
+                <div style="font-size:0.85rem; color:var(--text-muted)">All-Inclusive Tuition</div>
+              </div>
+            </div>
+
+            <div class="reveal-stagger-parent program-breakdown-grid">
+              <div class="reveal-card">
+                <div style="font-weight:700; font-size:0.85rem; color:var(--text-muted)">WEEKS 1–3</div>
+                <div style="font-weight:800; font-size:1.1rem">2 Sessions / Week</div>
+                <div style="font-size:0.85rem; color:var(--text-secondary)">One Reading (2h) &amp; One Math (2h) = 12 Hrs</div>
+              </div>
+              <div class="reveal-card">
+                <div style="font-weight:700; font-size:0.85rem; color:var(--text-muted)">WEEK 4</div>
+                <div style="font-weight:800; font-size:1.1rem">Final Review Session</div>
+                <div style="font-size:0.85rem; color:var(--text-secondary)">2-Hour Math &amp; Reading Review = 2 Hrs</div>
+              </div>
+              <div class="reveal-card">
+                <div style="font-weight:700; font-size:0.85rem; color:var(--text-muted)">1-ON-1 SESSIONS</div>
+                <div style="font-weight:800; font-size:1.1rem">4 Private Sessions</div>
+                <div style="font-size:0.85rem; color:var(--text-secondary)">1-Hour each with Jonah or Kasey = 4 Hrs</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="section-title reveal-init reveal-fade-up" style="font-size:1.5rem">Weekly Curriculum Timeline</h3>
+          <div class="program-timeline-grid reveal-stagger-parent" id="timeline-container">
+            <!-- Dynamic Program Timeline -->
+          </div>
+
+          <!-- Group Session Structure (Creative & Eye-Catching Breakdown) -->
+          <div class="reveal-init reveal-fade-up" style="margin-top:3.5rem">
+            <h3 class="section-title" style="font-size:1.5rem">Group Session Structure</h3>
+            <p style="color:var(--text-secondary); margin-bottom:1.5rem; margin-top:-0.5rem; font-size:0.95rem">
+              Every 2-hour group lecture is meticulously engineered into two identical 60-minute learning cycles to maximize active retention and problem-solving mastery.
+            </p>
+
+            <div class="reveal-stagger-parent" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:1.5rem">
+              
+              <!-- Hour 1 -->
+              <div class="session-structure-card hour-1 reveal-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; border-bottom:1px solid var(--border-color); padding-bottom:0.75rem">
+                  <span style="font-weight:800; font-size:1.2rem; color:var(--color-blueprint)">HOUR 1</span>
+                  <span class="session-structure-pill">60 MINUTES</span>
+                </div>
+
+                <div style="display:flex; flex-direction:column; gap:1rem">
+                  <div style="display:flex; align-items:flex-start; gap:0.85rem">
+                    <div style="width:28px; height:28px; border-radius:50%; background:var(--color-blueprint); color:#ffffff; font-weight:800; font-size:0.85rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px">1</div>
+                    <div>
+                      <div style="font-weight:700; font-size:0.95rem; color:var(--text-primary)">Concept Lecture</div>
+                      <div style="font-size:0.85rem; color:var(--text-muted)">Deep-dive presentation of core testing strategies &amp; formulas.</div>
+                    </div>
+                  </div>
+
+                  <div style="display:flex; align-items:flex-start; gap:0.85rem">
+                    <div style="width:28px; height:28px; border-radius:50%; background:var(--color-blueprint); color:#ffffff; font-weight:800; font-size:0.85rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px">2</div>
+                    <div>
+                      <div style="font-weight:700; font-size:0.95rem; color:var(--text-primary)">Practice Problem Set</div>
+                      <div style="font-size:0.85rem; color:var(--text-muted)">Individual student application on targeted SAT question sets.</div>
+                    </div>
+                  </div>
+
+                  <div style="display:flex; align-items:flex-start; gap:0.85rem">
+                    <div style="width:28px; height:28px; border-radius:50%; background:var(--color-blueprint); color:#ffffff; font-weight:800; font-size:0.85rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px">3</div>
+                    <div>
+                      <div style="font-weight:700; font-size:0.95rem; color:var(--text-primary)">Review &amp; Solutions</div>
+                      <div style="font-size:0.85rem; color:var(--text-muted)">Step-by-step solution walkthrough &amp; strategy breakdown.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hour 2 -->
+              <div class="session-structure-card hour-2 reveal-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; border-bottom:1px solid var(--border-color); padding-bottom:0.75rem">
+                  <span style="font-weight:800; font-size:1.2rem; color:var(--color-gold-dark)">HOUR 2</span>
+                  <span class="session-structure-pill">60 MINUTES</span>
+                </div>
+
+                <div style="display:flex; flex-direction:column; gap:1rem">
+                  <div style="display:flex; align-items:flex-start; gap:0.85rem">
+                    <div style="width:28px; height:28px; border-radius:50%; background:var(--color-gold-dark); color:#ffffff; font-weight:800; font-size:0.85rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px">1</div>
+                    <div>
+                      <div style="font-weight:700; font-size:0.95rem; color:var(--text-primary)">Concept Lecture</div>
+                      <div style="font-size:0.85rem; color:var(--text-muted)">Advanced techniques &amp; second topic module breakdown.</div>
+                    </div>
+                  </div>
+
+                  <div style="display:flex; align-items:flex-start; gap:0.85rem">
+                    <div style="width:28px; height:28px; border-radius:50%; background:var(--color-gold-dark); color:#ffffff; font-weight:800; font-size:0.85rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px">2</div>
+                    <div>
+                      <div style="font-weight:700; font-size:0.95rem; color:var(--text-primary)">Practice Problem Set</div>
+                      <div style="font-size:0.85rem; color:var(--text-muted)">Focused problem solving reinforcing the second module.</div>
+                    </div>
+                  </div>
+
+                  <div style="display:flex; align-items:flex-start; gap:0.85rem">
+                    <div style="width:28px; height:28px; border-radius:50%; background:var(--color-gold-dark); color:#ffffff; font-weight:800; font-size:0.85rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px">3</div>
+                    <div>
+                      <div style="font-weight:700; font-size:0.95rem; color:var(--text-primary)">Review &amp; Solutions</div>
+                      <div style="font-size:0.85rem; color:var(--text-muted)">Comprehensive solution review &amp; student diagnostic Q&amp;A.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="reveal-init reveal-fade-up" style="margin-top:3rem; text-align:center">
+            <button class="btn btn-blueprint" data-page-target="contact">
+              Enroll in Upcoming Cohort
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= PAGE 3: CO-FOUNDERS ================= -->
+    <div class="page-view hidden" id="page-tutors">
+      <section class="section-block">
+        <div class="container">
+          <h2 class="section-title reveal-init reveal-fade-up">Co-Founders &amp; Lead Tutors</h2>
+
+          <div class="tutor-grid reveal-stagger-parent" id="tutors-expanded-container">
+            <!-- Dynamic Expanded Co-Founders Rendered Here -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= PAGE 4: PRICING & TUTORING ================= -->
+    <div class="page-view hidden" id="page-pricing">
+      <section class="section-block">
+        <div class="container">
+          <h2 class="section-title reveal-init reveal-fade-up">Pricing &amp; Tutoring Options</h2>
+
+          <div class="reveal-stagger-parent" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:2rem; margin-bottom:3rem">
+            
+            <div class="reveal-card" style="background-color:var(--bg-surface); border:2px solid var(--color-blueprint); border-radius:var(--radius-lg); padding:2rem">
+              <div style="display:inline-block; padding:0.2rem 0.75rem; background:var(--color-blueprint); color:#fff; font-weight:700; font-size:0.8rem; border-radius:var(--radius-full); margin-bottom:1rem">MOST POPULAR</div>
+              <h3 style="font-size:1.5rem; font-weight:800; margin-bottom:0.5rem">4-Week SAT Program</h3>
+              <p style="color:var(--text-secondary); font-size:0.95rem; margin-bottom:1.5rem">Full 18-hour program including 14 group hours + 4 private 1-on-1 sessions.</p>
+              <div style="font-size:2.5rem; font-weight:800; color:var(--color-blueprint); margin-bottom:1.5rem">$799</div>
+              <button class="btn btn-blueprint" style="width:100%" data-page-target="contact">Register For Program</button>
+            </div>
+
+            <div class="reveal-card" style="background-color:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-lg); padding:2rem">
+              <h3 style="font-size:1.5rem; font-weight:800; margin-bottom:0.5rem">Private SAT Tutoring</h3>
+              <p style="color:var(--text-secondary); font-size:0.95rem; margin-bottom:1.5rem">1-on-1 personalized SAT tutoring sessions with either Jonah Blay or Kasey Mick.</p>
+              <div style="font-size:2.5rem; font-weight:800; color:var(--text-primary); margin-bottom:1.5rem">$75 <span style="font-size:1rem; font-weight:600; color:var(--text-muted)">/ hour</span></div>
+              
+              <!-- Interactive Tutoring Calculator -->
+              <div style="background:var(--bg-surface-alt); padding:1rem; border-radius:var(--radius-md); margin-bottom:1.5rem">
+                <label style="font-weight:700; font-size:0.85rem; display:block; margin-bottom:0.5rem">Calculate Tutoring Cost:</label>
+                <div style="display:flex; gap:0.5rem; margin-bottom:0.5rem">
+                  <input type="number" id="tutoring-hours-input" value="5" min="1" max="50" class="contact-input" style="width:80px; flex:none;">
+                  <select id="tutoring-subject-select" class="contact-input">
+                    <option value="sat-private">SAT Private Tutoring ($75/hr)</option>
+                    <option value="ap-subject">AP &amp; Subject Tutoring (Custom Inquiry)</option>
+                  </select>
+                </div>
+                <div id="calculator-output" style="text-align:center"></div>
+              </div>
+
+              <button class="btn btn-outline" style="width:100%" data-page-target="contact">Book Private Hours</button>
+            </div>
+
+          </div>
+
+          <!-- AP & Other Academic Subjects -->
+          <div class="reveal-init reveal-fade-up interactive-card" style="background-color:var(--bg-surface-alt); padding:2rem; border-radius:var(--radius-lg); border:1px solid var(--border-color)">
+            <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:0.5rem">AP &amp; Academic Subject Tutoring</h3>
+            <p style="color:var(--text-secondary); margin-bottom:1rem">
+              In addition to SAT prep, Jonah and Kasey offer specialized tutoring in AP Calculus, AP Physics, AP Chemistry, Geometry, Algebra, Writing, Spanish, and more. Rates vary depending on subject and frequency. Please reach out to us directly for custom pricing.
+            </p>
+            <button class="btn btn-gold" data-page-target="contact">Inquire About AP Subjects</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= PAGE 5: BRIGHT FUTURES ================= -->
+    <div class="page-view hidden" id="page-bright-futures">
+      
+      <!-- Section 1: Scholarship Tiers -->
+      <section class="section-block">
+        <div class="container">
+          <h2 class="section-title reveal-init reveal-fade-up">Bright Futures <span>Scholarship Tiers</span></h2>
+          <p class="reveal-init reveal-fade-up" style="color:var(--text-secondary); font-size:1.1rem; max-width:700px; margin-bottom:2.5rem;">
+            The Florida Bright Futures Scholarship Program rewards Florida high school graduates for high academic achievement. Here are the core SAT requirements for the two main tiers.
+          </p>
+          
+          <div class="reveal-stagger-parent" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:2rem;">
+            
+            <!-- FAS Card -->
+            <div class="reveal-card bf-tier-card fas">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.5rem">
+                <div>
+                  <h3 style="font-weight:800; font-size:1.4rem; color:var(--text-primary); margin-bottom:0.25rem;">Florida Academic Scholars (FAS)</h3>
+                  <div style="font-weight:700; color:var(--color-blueprint);">100% Tuition &amp; Applicable Fees</div>
+                </div>
+                <div style="font-size:2rem; font-weight:800; color:var(--color-blueprint); line-height:1; font-family:var(--font-mono)">FAS</div>
+              </div>
+              <p style="color:var(--text-secondary); font-size:0.95rem; margin-bottom:2rem; flex-grow:1;">
+                The highest tier award covering 100% of your tuition at Florida public institutions.
+              </p>
+              <div style="background:var(--bg-surface-alt); padding:1.25rem; border-radius:var(--radius-md); border-left:4px solid var(--color-blueprint)">
+                <div style="font-size:0.85rem; color:var(--text-muted); font-weight:700; margin-bottom:0.25rem">REQUIRED SAT SCORES</div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+                  <span style="font-weight:600; color:var(--text-primary);">2024-2025 Grads:</span>
+                  <span style="font-weight:800; font-family:var(--font-mono);">1340</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-weight:600; color:var(--text-primary);">2025-2026 &amp; Beyond:</span>
+                  <span style="font-weight:800; font-family:var(--font-mono); color:var(--color-blueprint); font-size:1.1rem">1330</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- FMS Card -->
+            <div class="reveal-card bf-tier-card fms">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.5rem">
+                <div>
+                  <h3 style="font-weight:800; font-size:1.4rem; color:var(--text-primary); margin-bottom:0.25rem;">Florida Medallion Scholars (FMS)</h3>
+                  <div style="font-weight:700; color:var(--color-gold-dark);">75% Tuition &amp; Applicable Fees</div>
+                </div>
+                <div style="font-size:2rem; font-weight:800; color:var(--color-gold-dark); line-height:1; font-family:var(--font-mono)">FMS</div>
+              </div>
+              <p style="color:var(--text-secondary); font-size:0.95rem; margin-bottom:2rem; flex-grow:1;">
+                The second tier award covering 75% of your tuition at Florida public institutions.
+              </p>
+              <div style="background:var(--bg-surface-alt); padding:1.25rem; border-radius:var(--radius-md); border-left:4px solid var(--color-gold-dark)">
+                <div style="font-size:0.85rem; color:var(--text-muted); font-weight:700; margin-bottom:0.25rem">REQUIRED SAT SCORES</div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+                  <span style="font-weight:600; color:var(--text-primary);">2024-2025 Grads:</span>
+                  <span style="font-weight:800; font-family:var(--font-mono);">1210</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-weight:600; color:var(--text-primary);">2025-2026 &amp; Beyond:</span>
+                  <span style="font-weight:800; font-family:var(--font-mono); color:var(--color-gold-dark); font-size:1.1rem">1190</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Deadlines & Superscoring -->
+      <section class="section-block" style="background-color:var(--bg-surface-alt);">
+        <div class="container">
+          <h2 class="section-title reveal-init reveal-fade-up">Deadlines &amp; <span>Superscoring</span></h2>
+          
+          <div class="reveal-stagger-parent" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem; margin-top:2rem;">
+            <div class="reveal-card bf-interactive-card" style="padding:2rem; text-align:center;">
+              <div style="font-weight:800; font-size:1.2rem; color:var(--text-primary); margin-bottom:0.5rem">SAT Score Deadline</div>
+              <div style="font-weight:700; color:var(--color-blueprint); margin-bottom:0.75rem">August 31st of Graduation Year</div>
+              <p style="font-size:0.95rem; color:var(--text-secondary); margin:0;">
+                All required test scores must be earned by this date.
+              </p>
+            </div>
+            
+            <div class="reveal-card bf-interactive-card" style="padding:2rem; text-align:center;">
+              <div style="font-weight:800; font-size:1.2rem; color:var(--text-primary); margin-bottom:0.5rem">FFAA Application</div>
+              <div style="font-weight:700; color:var(--color-blueprint); margin-bottom:0.75rem">August 31st of Graduation Year</div>
+              <p style="font-size:0.95rem; color:var(--text-secondary); margin:0;">
+                The Florida Financial Aid Application must be submitted by this date.
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal-init reveal-scale bf-interactive-card" style="padding:2.5rem; margin-top:2rem;">
+            <h3 style="font-size:1.4rem; font-weight:800; color:var(--color-blueprint); margin-bottom:0.5rem;">Superscoring Policy</h3>
+            <p style="color:var(--text-primary); font-size:1rem; margin:0; line-height:1.6;">
+              Bright Futures accepts SAT superscores. The program combines the highest Evidence-Based Reading &amp; Writing score and the highest Math score across multiple test administrations to calculate the maximum composite score. SAT scores cannot be combined with ACT or CLT scores.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Other Requirements -->
+      <section class="section-block">
+        <div class="container">
+          <h2 class="section-title reveal-init reveal-fade-up">Additional <span>Requirements</span></h2>
+          <p class="reveal-init reveal-fade-up" style="color:var(--text-secondary); margin-bottom:2rem;">Along with your SAT scores, you must meet the following criteria:</p>
+          
+          <div class="reveal-stagger-parent" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2rem;">
+            
+            <!-- GPA -->
+            <div class="reveal-card interactive-accent-side" style="border-top:2px solid var(--border-color); padding:1.5rem;">
+              <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:1rem;">Weighted GPA</h3>
+              <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--bg-surface-alt); padding-bottom:0.75rem; margin-bottom:0.75rem;">
+                <span style="font-weight:700; color:var(--color-blueprint)">FAS</span>
+                <span style="font-weight:600;">3.5 Minimum</span>
+              </div>
+              <div style="display:flex; justify-content:space-between;">
+                <span style="font-weight:700; color:var(--color-gold-dark)">FMS</span>
+                <span style="font-weight:600;">3.0 Minimum</span>
+              </div>
+            </div>
+
+            <!-- Service Hours -->
+            <div class="reveal-card interactive-accent-side" style="border-top:2px solid var(--border-color); padding:1.5rem;">
+              <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:1rem;">Service or Work Hours</h3>
+              <div style="display:flex; flex-direction:column; gap:0.5rem; border-bottom:1px solid var(--bg-surface-alt); padding-bottom:0.75rem; margin-bottom:0.75rem;">
+                <div style="display:flex; justify-content:space-between;">
+                  <span style="font-weight:700; color:var(--color-blueprint)">FAS</span>
+                  <span style="font-weight:600; text-align:right;">100 Volunteer Hours<br>or 100 Paid Work Hours</span>
+                </div>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <div style="display:flex; justify-content:space-between;">
+                  <span style="font-weight:700; color:var(--color-gold-dark)">FMS</span>
+                  <span style="font-weight:600; text-align:right;">75 Volunteer Hours<br>or 100 Paid Work Hours</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: The Blueprint Advantage -->
+      <section class="section-block" style="background-color:var(--bg-surface-alt);">
+        <div class="container">
+          <div class="reveal-init reveal-scale" style="background-color:var(--bg-surface); padding:3rem; border-radius:var(--radius-lg); border:2px solid var(--color-blueprint); box-shadow:var(--shadow-lg); text-align:center;">
+            <h2 style="font-size:2rem; font-weight:800; color:var(--text-primary); margin-bottom:1rem;">The <span style="color:var(--color-blueprint);">Blueprint</span> Advantage</h2>
+            <p style="color:var(--text-secondary); font-size:1.1rem; max-width:700px; margin:0 auto 2rem auto; line-height:1.6;">
+              Breaking the 1330 SAT threshold for 100% Bright Futures coverage is the ultimate goal for most Florida high schoolers. Our 4-Week, 18-Hour program is surgically designed to get you there.
+            </p>
+            
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1.5rem; text-align:left; margin-bottom:2.5rem;">
+              <div class="interactive-card" style="background:var(--bg-surface-alt); padding:1.5rem; border-radius:var(--radius-md);">
+                <div style="font-weight:800; font-size:1.1rem; color:var(--color-blueprint); margin-bottom:0.5rem;">Targeted Focus</div>
+                <div style="font-size:0.9rem; color:var(--text-secondary);">We ignore fluff and focus exclusively on the high-yield question archetypes needed to jump from 1100s/1200s to 1330+.</div>
+              </div>
+              <div class="interactive-card" style="background:var(--bg-surface-alt); padding:1.5rem; border-radius:var(--radius-md);">
+                <div style="font-weight:800; font-size:1.1rem; color:var(--color-blueprint); margin-bottom:0.5rem;">Diagnostic Precision</div>
+                <div style="font-size:0.9rem; color:var(--text-secondary);">Our 4 private 1-on-1 sessions allow us to isolate and eliminate the exact precision errors holding back your superscore.</div>
+              </div>
+            </div>
+            
+            <button class="btn btn-blueprint" data-page-target="contact" style="font-size:1.1rem; padding:0.85rem 2.5rem;">
+              Start Your 1330 Journey
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ================= PAGE 6: TESTIMONIALS ================= -->
+    <div class="page-view hidden" id="page-testimonials">
+      <section class="section-block">
+        <div class="container">
+          <h2 class="section-title reveal-init reveal-fade-up">Student Reviews &amp; Testimonials</h2>
+
+          <div class="testimonials-grid reveal-stagger-parent" id="testimonials-container">
+            <!-- Dynamic Testimonials from Levi P., Tristan P., Katie N. -->
+          </div>
+
+          <!-- Add Testimonial Section -->
+          <div class="reveal-init reveal-fade-up" style="margin-top:4rem; background-color:var(--bg-surface); padding:2rem; border-radius:var(--radius-lg); border:1px solid var(--border-color); max-width:600px; margin-left:auto; margin-right:auto">
+            <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:1rem">Are You a Former Student? Leave a Review</h3>
+            
+            <form id="testimonial-form" style="display:flex; flex-direction:column;">
+              <div style="margin-bottom:1rem;">
+                <label style="font-weight:700; font-size:0.9rem; display:block; margin-bottom:0.3rem">Full Name</label>
+                <input type="text" name="studentName" class="contact-input" placeholder="Your Name (e.g. Alex M.)" maxlength="100" required>
+              </div>
+              <div style="margin-bottom:1rem;">
+                <label style="font-weight:700; font-size:0.9rem; display:block; margin-bottom:0.3rem">Cohort</label>
+                <select name="scoreImprovement" id="testimonial-cohort" class="contact-input" required>
+                  <option value="" disabled selected>Select a cohort...</option>
+                  <option value="August 2025 SAT">August 2025 SAT</option>
+                  <option value="March 2026 SAT">March 2026 SAT</option>
+                  <option value="August 2026 SAT">August 2026 SAT</option>
+                </select>
+              </div>
+              
+              <div id="testimonial-rating-container" class="progressive-field">
+                <label style="font-weight:700; font-size:0.9rem; display:block; margin-bottom:0.3rem">Star Rating</label>
+                <select name="rating" id="testimonial-rating" class="contact-input" style="font-weight:700;" required>
+                  <option value="" disabled selected>Select a rating...</option>
+                  <option value="5">★★★★★ (5 Stars)</option>
+                  <option value="4">★★★★☆ (4 Stars)</option>
+                  <option value="3">★★★☆☆ (3 Stars)</option>
+                  <option value="2">★★☆☆☆ (2 Stars)</option>
+                  <option value="1">★☆☆☆☆ (1 Star)</option>
+                </select>
+              </div>
+
+              <div id="testimonial-message-container" class="progressive-field">
+                <label style="font-weight:700; font-size:0.9rem; display:block; margin-bottom:0.3rem">Review</label>
+                <textarea name="reviewText" id="testimonial-message" class="contact-input" rows="3" placeholder="Share your experience with B&M Blueprint..." maxlength="2000" required></textarea>
+              </div>
+              <label style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem; line-height:1.4; display:flex; align-items:flex-start; gap:0.5rem; cursor:pointer; position:relative;">
+                <input type="checkbox" id="testimonial-consent" class="hidden-checkbox" required>
+                <span class="custom-checkbox-ui"></span>
+                <span>By submitting this form, I agree to the <a href="privacy.html" target="_blank" style="color:var(--color-blueprint); text-decoration:underline;">Privacy Policy</a>.</span>
+              </label>
+              <button type="submit" id="testimonial-submit-btn" class="btn btn-gold" disabled>Submit Review</button>
+            </form>
+          </div>
+
+          <h2 class="section-title reveal-init reveal-fade-up" style="margin-top:4rem;">Parent Reviews &amp; Testimonials</h2>
+          
+          <div class="testimonials-grid reveal-stagger-parent" id="parent-testimonials-container">
+            <!-- Dynamic Parent Testimonials -->
+          </div>
+
+          <!-- Add Parent Testimonial Section -->
+          <div class="reveal-init reveal-fade-up" style="margin-top:4rem; background-color:var(--bg-surface); padding:2rem; border-radius:var(--radius-lg); border:1px solid var(--border-color); max-width:600px; margin-left:auto; margin-right:auto">
+            <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:1rem">Are You the Parent of a Former Student? Leave a Review.</h3>
+            
+            <form id="parent-testimonial-form" style="display:flex; flex-direction:column;">
+              <div style="margin-bottom:1rem;">
+                <label style="font-weight:700; font-size:0.9rem; display:block; margin-bottom:0.3rem">Full Name</label>
+                <input type="text" name="parentName" class="contact-input" placeholder="Your Name (e.g. Alex M.)" maxlength="100" required>
+              </div>
+              <div style="margin-bottom:1rem;">
+                <label style="font-weight:700; font-size:0.9rem; display:block; margin-bottom:0.3rem">Child's Cohort</label>
+                <select name="childCohort" id="parent-testimonial-cohort" class="contact-input" required>
+                  <option value="" disabled selected>Select a cohort...</option>
+                  <option value="August 2025 SAT">August 2025 SAT</option>
+                  <option value="March 2026 SAT">March 2026 SAT</option>
+                  <option value="August 2026 SAT">August 2026 SAT</option>
+                </select>
+              </div>
+              
+              <div id="parent-testimonial-rating-container" class="progressive-field">
+                <label style="font-weight:700; font-size:0.9rem; display:block; margin-bottom:0.3rem">Star Rating</label>
+                <select name="parentRating" id="parent-testimonial-rating" class="contact-input" style="font-weight:700;" required>
+                  <option value="" disabled selected>Select a rating...</option>
+                  <option value="5">★★★★★ (5 Stars)</option>
+                  <option value="4">★★★★☆ (4 Stars)</option>
+                  <option value="3">★★★☆☆ (3 Stars)</option>
+                  <option value="2">★★☆☆☆ (2 Stars)</option>
+                  <option value="1">★☆☆☆☆ (1 Star)</option>
+                </select>
+              </div>
+
+              <div id="parent-testimonial-message-container" class="progressive-field">
+                <label style="font-weight:700; font-size:0.9rem; display:block; margin-bottom:0.3rem">Review</label>
+                <textarea name="parentReviewText" id="parent-testimonial-message" class="contact-input" rows="3" placeholder="Share your experience with B&M Blueprint..." maxlength="2000" required></textarea>
+              </div>
+              <label style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem; line-height:1.4; display:flex; align-items:flex-start; gap:0.5rem; cursor:pointer; position:relative;">
+                <input type="checkbox" id="parent-testimonial-consent" class="hidden-checkbox" required>
+                <span class="custom-checkbox-ui"></span>
+                <span>By submitting this form, I agree to the <a href="privacy.html" target="_blank" style="color:var(--color-blueprint); text-decoration:underline;">Privacy Policy</a>.</span>
+              </label>
+              <button type="submit" id="parent-testimonial-submit-btn" class="btn btn-gold" disabled>Submit Review</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= PAGE 7: CONTACT ================= -->
+    <div class="page-view hidden" id="page-contact">
+      <section class="section-block">
+        <div class="container">
+          <h2 class="section-title reveal-init reveal-fade-up">Contact &amp; Inquiry</h2>
+
+          <div class="contact-box reveal-init reveal-scale">
+            <div class="reveal-stagger-parent">
+              <h3 style="font-size:1.4rem; font-weight:800; margin-bottom:1.5rem">Get In Touch With Jonah &amp; Kasey</h3>
+
+              <div class="contact-info-item reveal-card" style="cursor:pointer;">
+                <div>
+                  <div class="contact-title">Address</div>
+                  <div style="color:var(--text-secondary); font-size:0.95rem; line-height:1.5;">Tallahassee, Florida 32312</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item reveal-card" style="cursor:pointer;">
+                <div>
+                  <div class="contact-title">Email</div>
+                  <div style="color:var(--text-secondary); font-size:0.95rem; line-height:1.5;">bandmblueprint@gmail.com</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item reveal-card" style="cursor:pointer;">
+                <div>
+                  <div class="contact-title">Phone</div>
+                  <div style="color:var(--text-secondary); font-size:0.95rem; line-height:1.5;">850-556-9742<br>850-966-0051</div>
+                </div>
+              </div>
+            </div>
+
+            <form class="contact-form" id="contact-form" style="display:flex; flex-direction:column;">
+              <div style="margin-bottom:1rem;">
+                <label style="font-weight:700; font-size:0.9rem; display:block; margin-bottom:0.3rem">Full Name</label>
+                <input type="text" name="name" class="contact-input" placeholder="John Doe" maxlength="100" required>
+              </div>
+
+              <div style="margin-bottom:1rem;">
+                <label style="font-weight:700; font-size:0.9rem; display:block; margin-bottom:0.3rem">Email Address</label>
+                <input type="email" name="email" class="contact-input" placeholder="john@example.com" maxlength="254" required>
+              </div>
+
+              <div style="margin-bottom:1rem;">
+                <label style="font-weight:700; font-size:0.9rem; display:block; margin-bottom:0.3rem">Reason for Contact</label>
+                <select name="reason" id="contact-reason" class="contact-input" required>
+                  <option value="" disabled selected>Select a reason...</option>
+                  <option value="Comprehensive SAT Program">Comprehensive SAT Program</option>
+                  <option value="Private SAT Tutoring">Private SAT Tutoring</option>
+                  <option value="Private Academic Tutoring">Private Academic Tutoring</option>
+                </select>
+              </div>
+
+              <div id="subject-container" class="progressive-field">
+                <label style="font-weight:700; font-size:0.9rem; display:block; margin-bottom:0.3rem">Subject of Inquiry</label>
+                <select name="subject" id="contact-subject" class="contact-input">
+                  <option value="" disabled selected>Select a subject...</option>
+                  <option value="October SAT Program">October SAT Program</option>
+                  <option value="December SAT Program">December SAT Program</option>
+                  <option value="Potential Future Programs">Potential Future Programs</option>
+                </select>
+              </div>
+
+              <div id="message-container" class="progressive-field">
+                <label style="font-weight:700; font-size:0.9rem; display:block; margin-bottom:0.3rem">Message</label>
+                <textarea name="message" id="contact-message" class="contact-input" rows="4" placeholder="Tell us about your student's grade, current SAT score, or tutoring needs..." maxlength="2000"></textarea>
+              </div>
+
+              <label style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem; line-height:1.4; display:flex; align-items:flex-start; gap:0.5rem; cursor:pointer; position:relative;">
+                <input type="checkbox" id="contact-consent" class="hidden-checkbox" required>
+                <span class="custom-checkbox-ui"></span>
+                <span>By submitting this inquiry, I agree to the <a href="privacy.html" target="_blank" style="color:var(--color-blueprint); text-decoration:underline;">Privacy Policy</a>.</span>
+              </label>
+              <button type="submit" class="btn btn-blueprint" id="contact-submit-btn" disabled>Send Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container" style="display:flex; flex-direction:column; align-items:center; gap:0.5rem;">
+      <p>&copy; 2026 B&amp;M Blueprint L.L.C. All rights reserved.</p>
+      <a href="privacy.html" style="font-size:0.8rem; color:var(--color-blueprint); text-decoration:underline;">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <!-- Custom Alert Modal -->
+  <div id="custom-alert-backdrop" class="custom-alert-backdrop">
+    <div id="custom-alert-card" class="custom-alert-card">
+      <h3 id="custom-alert-title" class="custom-alert-title">Success</h3>
+      <p id="custom-alert-message" class="custom-alert-message"></p>
+      <button id="custom-alert-btn" class="btn btn-blueprint">OK</button>
+    </div>
+  </div>
+
+  <!-- Security: Invisible reCAPTCHA v2 (EmailJS supports v2 natively) -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <div class="g-recaptcha" data-sitekey="6LfdxYYtAAAAACdMZriZWK_JZJQGeWrOQs4FF9nh" data-size="invisible" data-callback="onRecaptchaSuccess" data-error-callback="onRecaptchaError" data-expired-callback="onRecaptchaError"></div>
+
+  <!-- ES6 Main Application Module -->
+  <script type="module" src="js/main.js?v=47"></script>
+</body>
+</html>
