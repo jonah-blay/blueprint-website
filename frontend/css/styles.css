@@ -609,11 +609,6 @@ button, input, select, textarea {
     min-height: 180px;
     height: 180px;
   }
-  
-  /* Fix iOS massive zoom bug by dropping fixed attachment on mobile */
-  .hero-window-bg {
-    background-attachment: scroll;
-  }
 }
 
 /* Fixed Background Image Viewport (Logo Image Standstill Illusion) */
@@ -628,6 +623,13 @@ button, input, select, textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; /* Keeps logo image stationary as content scrolls past */
+}
+
+/* Override for mobile to fix massive zoom bug on iOS */
+@media (max-width: 768px) {
+  .hero-window-bg {
+    background-attachment: scroll;
+  }
 }
 
 /* Dark Mode Hero Background Override */
