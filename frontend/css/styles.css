@@ -625,10 +625,13 @@ button, input, select, textarea {
   background-attachment: fixed; /* Keeps logo image stationary as content scrolls past */
 }
 
-/* Override for mobile to fix massive zoom bug on iOS */
+/* Override for mobile to fix massive zoom bug on iOS while keeping parallax */
 @media (max-width: 768px) {
   .hero-window-bg {
-    background-attachment: scroll;
+    background-attachment: fixed;
+    /* By explicitly setting vh units, iOS Safari won't use the massive document height */
+    background-size: max(100vw, 100vh) max(100vw, 100vh);
+    background-position: center bottom;
   }
 }
 
@@ -1295,6 +1298,35 @@ button, input, select, textarea {
 @media (max-width: 768px) {
   .program-breakdown-grid {
     grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .program-header-flex {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .program-header-left, .program-header-right {
+    text-align: center !important;
+  }
+  .tutor-card-header-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .tutor-card-header-left {
+    align-items: center;
+  }
+  .tutor-card-info-right {
+    align-items: center;
+    text-align: center;
+  }
+  .tutor-sat-single-line {
+    justify-content: center;
+  }
+  .tutor-focus-univ-block {
+    text-align: center;
+  }
+  .pricing-price-text {
     text-align: center;
   }
 }
