@@ -625,13 +625,18 @@ button, input, select, textarea {
   background-attachment: fixed; /* Keeps logo image stationary as content scrolls past */
 }
 
-/* Override for mobile to fix massive zoom bug on iOS while keeping parallax */
+/* Mobile Parallax Strategy: 
+   iOS Safari breaks 'fixed' with 'cover'. We use 'scroll' to size it relative to the container.
+   We add 500px of height slack at the top and shift it up so the bottom aligns perfectly.
+   JS in main.js will translate it down on scroll to create a flawless 1:1 standstill illusion. */
 @media (max-width: 768px) {
   .hero-window-bg {
-    background-attachment: fixed;
-    /* By explicitly setting vh units, iOS Safari won't use the massive document height */
-    background-size: max(100vw, 100vh) max(100vw, 100vh);
+    background-attachment: scroll !important;
+    height: calc(100% + 500px);
+    top: -500px;
+    background-size: cover;
     background-position: center bottom;
+    will-change: transform;
   }
 }
 
@@ -1292,6 +1297,12 @@ button, input, select, textarea {
 @media (max-width: 1100px) {
   .tutor-grid {
     grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+  }
+  .tutor-grid > * {
+    max-width: 100%;
+    width: 100%;
   }
 }
 

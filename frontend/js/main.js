@@ -139,11 +139,29 @@ document.addEventListener('DOMContentLoaded', () => {
   initCalculators();
   initForms();
   initScrollAnimations();
+  initMobileParallax();
   triggerHeroBannerAnimation();
   requestAnimationFrame(() => {
     checkViewportReveals();
   });
 });
+
+/**
+ * Mobile Hero Parallax Fix
+ */
+function initMobileParallax() {
+  const heroBg = document.getElementById('hero-window-bg');
+  if (!heroBg) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.innerWidth <= 768) {
+      // Translate the background down by the scroll amount to simulate 'fixed'
+      heroBg.style.transform = `translateY(${window.scrollY}px)`;
+    } else {
+      heroBg.style.transform = 'none';
+    }
+  }, { passive: true });
+}
 
 /**
  * Theme Switcher Logic (Default Light Mode with Dark Mode Toggle)
