@@ -602,12 +602,14 @@ button, input, select, textarea {
 
 @media (max-width: 768px) {
   .hero-window-frame-full {
-    height: calc(100vh - 180px);
-    min-height: calc(100vh - 180px);
+    height: 450px;
+    min-height: 450px;
+    /* Removed CSS height transition for mobile to prevent address bar jitter */
+    transition: none;
   }
   .hero-window-frame-full.is-subpage {
-    min-height: 180px;
-    height: 180px;
+    min-height: 200px;
+    height: 200px;
   }
 }
 
@@ -625,18 +627,17 @@ button, input, select, textarea {
   background-attachment: fixed; /* Keeps logo image stationary as content scrolls past */
 }
 
-/* Mobile Parallax Strategy: 
-   iOS Safari breaks 'fixed' with 'cover'. We use 'scroll' to size it relative to the container.
-   We add 500px of height slack at the top and shift it up so the bottom aligns perfectly.
-   JS in main.js will translate it down on scroll to create a flawless 1:1 standstill illusion. */
+/* Mobile Fallback: 
+   Parallax on mobile browsers is notoriously jittery and prone to zooming bugs 
+   when the address bar collapses. We use a static scroll layout for stability. */
 @media (max-width: 768px) {
   .hero-window-bg {
     background-attachment: scroll !important;
-    height: calc(100% + 500px);
-    top: -500px;
+    height: 100%;
+    top: 0;
     background-size: cover;
-    background-position: center bottom;
-    will-change: transform;
+    background-position: center 80%; /* Keeps the blueprint nicely framed near the bottom without severe cropping */
+    transform: none !important;
   }
 }
 
