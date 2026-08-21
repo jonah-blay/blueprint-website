@@ -606,10 +606,6 @@ button, input, select, textarea {
     min-height: 450px;
     /* Removed CSS height transition for mobile to prevent address bar jitter */
     transition: none;
-    background-color: var(--color-blueprint); /* Hides parallax gap */
-  }
-  [data-theme="dark"] .hero-window-frame-full {
-    background-color: #000; /* Dark mode parallax gap mask */
   }
   .hero-window-frame-full.is-subpage {
     min-height: 200px;
