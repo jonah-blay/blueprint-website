@@ -176,8 +176,8 @@ const DATA_REPOSITORY = {
   cohorts: [
     { name: 'August 2025 SAT Program', status: 'Completed' },
     { name: 'March 2026 SAT Program', status: 'Completed' },
-    { name: 'August 2026 SAT Program', status: 'Currently Active' },
-    { name: 'October 2026 SAT Program', status: 'Upcoming' },
+    { name: 'August 2026 SAT Program', status: 'Completed' },
+    { name: 'November 2026 SAT Program', status: 'Now Accepting Registration' },
     { name: 'December 2026 SAT Program', status: 'Upcoming' }
   ],
 

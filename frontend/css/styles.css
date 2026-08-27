@@ -1509,6 +1509,15 @@ button, input, select, textarea {
   border-style: dashed;
 }
 
+.cohort-card.registration-open {
+  border: 2px solid var(--color-blueprint);
+  background-color: rgba(0, 123, 255, 0.05); /* Very light blue tint */
+}
+
+[data-theme="dark"] .cohort-card.registration-open {
+  background-color: rgba(0, 123, 255, 0.15); /* Slightly darker blue tint for contrast in dark mode */
+}
+
 /* Contact Form Styles */
 .contact-input {
   width: 100%;

@@ -4,7 +4,7 @@
  * Slide-Out Navigation Drawer, Multi-Page Router, and Estimator logic.
  */
 
-import { BlueprintAPI } from './api.js?v=18';
+import { BlueprintAPI } from './api.js?v=19';
 
 // HTML Escaping Utility
 function escapeHTML(str) {
